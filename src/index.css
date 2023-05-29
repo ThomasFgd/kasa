@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 150px;
+  font-family: 'Montserrat', sans-serif;
+	max-width: 1440px; 
+  width: 80%;
+	margin: 0 auto !important; 
+  box-sizing: border-box;
+  position: relative;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+}
