@@ -1,5 +1,32 @@
 .collapse {
-    width: 90%;
+    width: 75%;
+    margin: 0 0 20px 0;
+    background-color: #f6f6f6;
+    border-radius : 10px;
+}
+
+.collapse100 {
+    width: 100%;
+    margin: 0 0 20px 0;
+    background-color: #f6f6f6;
+    border-radius : 10px;
+}
+
+.content {
+    padding: 10px 10px;
+    margin: 0;
+    color: #ff6060;
+    
+}
+
+.list {
+    padding: 10px 10px;
+    color: #ff6060;
+    margin: 0;
+}
+
+.containerOpen {
+    margin: 10px;
 }
 
 .collapse_button {
@@ -10,13 +37,15 @@
     cursor: pointer;
     background-color: #ff6060;
     color : white;
-    height: 35px;
+    height: 50px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     padding: 0px 10px;
     border-radius: 10px;
+    margin: 0;
 }
 
 .fleche {
     width: 15px;
 }
+

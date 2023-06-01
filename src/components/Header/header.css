@@ -18,6 +18,14 @@ nav{
 
 .lien {
     color: #ff6060;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 500;
     text-decoration: none;
+}
+
+.lienActif {
+    color: #ff6060;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline;
 }
