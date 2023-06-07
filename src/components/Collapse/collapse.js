@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './collapse.css';
-import fleche from '../../assets/fleche.png';
+import flecheBas from '../../assets/fleche.png';
 import flecheHaut from '../../assets/fleche-haut.png';
 import { useLocation } from 'react-router-dom';
 
@@ -31,7 +31,7 @@ function Collapse({ title, content }) {
         <h3 onClick={handleToggle} className="collapse_button">
           {title}
           <img
-            src={isOpen ? flecheHaut : fleche}
+            src={isOpen ? flecheHaut : flecheBas}
             alt="fleche"
             className="fleche"
           ></img>
