@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Logements from '../../assets/logements.json';
 import './logement.css';
 import Carrousel from '../../components/Carrousel/carrousel';
@@ -7,10 +7,15 @@ import etoileRouge from '../../assets/etoile_rouge.png';
 import etoileGrise from '../../assets/etoile_grise.png';
 
 function Logement() {
-  const { id } = useParams('id');
+  const { id } = useParams();
+  const exist = Logements.some((item) => item.id === id);
+  console.log(exist);
+  if (!exist) {
+    return <Navigate replace to="/404" />;
+  }
+
   const data = Logements.filter((item) => item.id === id)[0];
   const slides = data.pictures;
-
   return (
     <div className="main">
       <div className="carrousel">
