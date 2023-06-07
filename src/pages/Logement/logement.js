@@ -9,13 +9,12 @@ import etoileGrise from '../../assets/etoile_grise.png';
 function Logement() {
   const { id } = useParams('id');
   const data = Logements.filter((item) => item.id === id)[0];
-  const slides = [data.pictures];
-  console.log(slides);
+  const slides = data.pictures;
 
   return (
     <div className="main">
       <div className="carrousel">
-        <Carrousel slides={slides[0]} />
+        <Carrousel slides={slides} />
       </div>
       <div className="content">
         <div className="enTete">
@@ -24,21 +23,21 @@ function Logement() {
             <p>{data.location}</p>
           </div>
           <div>
-            <div className="proprio">
-              <p>{data.host.name}</p>
-              <img src={data.host.picture} alt="Propriétaire" />
+            <div className="tagGroup">
+              {data.tags.map((tag, index) => {
+                return (
+                  <p className="tag" key={index}>
+                    {tag}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>
-        <div className="tagStar">
-          <div className="tagGroup">
-            {data.tags.map((tag, index) => {
-              return (
-                <p className="tag" key={index}>
-                  {tag}
-                </p>
-              );
-            })}
+        <div className="proprio-star">
+          <div className="proprio">
+            <p>{data.host.name}</p>
+            <img src={data.host.picture} alt="Propriétaire" />
           </div>
           <div className="star">
             {[...Array(5)].map((star, index) => {

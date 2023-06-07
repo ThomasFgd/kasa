@@ -2,7 +2,7 @@
     width: 75%;
     margin: 0 0 20px 0;
     background-color: #f6f6f6;
-    border-radius : 10px;
+    border-radius : 5px;
 }
 
 .collapse100 {
@@ -41,11 +41,21 @@
     font-weight: 500;
     font-size: 18px;
     padding: 0px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0;
 }
 
 .fleche {
     width: 15px;
+}
+
+@media (max-width : 768px) {
+    .collapse {
+        width: 100%;
+    }
+
+    .collapse_button{
+        height: 35px;
+    }
 }
 

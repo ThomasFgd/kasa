@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './collapse.css';
 import fleche from '../../assets/fleche.png';
+import flecheHaut from '../../assets/fleche-haut.png';
 import { useLocation } from 'react-router-dom';
 
 function Collapse({ title, content }) {
@@ -29,7 +30,11 @@ function Collapse({ title, content }) {
       <div>
         <h3 onClick={handleToggle} className="collapse_button">
           {title}
-          <img src={fleche} alt="fleche" className="fleche"></img>
+          <img
+            src={isOpen ? flecheHaut : fleche}
+            alt="fleche"
+            className="fleche"
+          ></img>
         </h3>
       </div>
       <div className={isOpen ? 'containerOpen' : 'container'}>

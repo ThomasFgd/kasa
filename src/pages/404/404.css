@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 60vh;
     color: #ff6060;
 }
 
@@ -13,7 +14,20 @@
 }
 
 .retour{
-    font-size: 20px;
+    font-size: 18px;
     color: #ff6060;
     margin-top: 40px;
+}
+
+@media (max-width:768px) {
+    .error404 {
+        font-size: 100px;
+    }
+    .oups {
+        font-size: 18px;
+        text-align: center;
+    }
+    .retour {
+        font-size: 14px;
+    }
 }

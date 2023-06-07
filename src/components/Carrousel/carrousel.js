@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import flecheDroite from '../../assets/fleche-droite.png';
 import flecheGauche from '../../assets/fleche-gauche.png';
+import './carrousel.css';
 
 function Carrousel({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,7 +38,7 @@ function Carrousel({ slides }) {
   const currentSlide = {
     position: 'absolute',
     top: '90%',
-    // transform: 'translate(50%, -50%)',
+    transform: 'translate(50%, -50%)',
     right: '50%',
     zIndex: 1,
     color: '#fff',
@@ -59,13 +60,17 @@ function Carrousel({ slides }) {
 
   return (
     <div style={sliderStyles}>
-      <div style={leftArrowStyles} onClick={goToPrevious}>
-        <img src={flecheGauche} alt="Flèche gauche"></img>
+      <div className="fleche-carrousel">
+        <div style={leftArrowStyles} onClick={goToPrevious}>
+          <img src={flecheGauche} alt="Flèche gauche"></img>
+        </div>
+        <div style={rightArrowStyles} onClick={goToNext}>
+          <img src={flecheDroite} alt="Flèche droite"></img>
+        </div>
       </div>
+
       <div style={slideStyles}></div>
-      <div style={rightArrowStyles} onClick={goToNext}>
-        <img src={flecheDroite} alt="Flèche droite"></img>
-      </div>
+
       <div style={currentSlide}>{`${currentIndex + 1}/${slides.length}`}</div>
     </div>
   );

@@ -3,11 +3,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 50px;
+    margin: 30px 0px ;
 }
 
 .logo {
-    height: 60px;
+    height: 3em;
 }
 
 nav{
@@ -16,7 +16,7 @@ nav{
     gap: 50px;
 }
 
-.lien {
+.lien, .lienActif {
     color: #ff6060;
     font-size: 24px;
     font-weight: 500;
@@ -24,8 +24,17 @@ nav{
 }
 
 .lienActif {
-    color: #ff6060;
-    font-size: 24px;
-    font-weight: 500;
     text-decoration: underline;
+}
+
+@media (max-width : 768px) {
+    header {
+        margin: 30px 0px;
+    }
+    .lien, .lienActif {
+        font-size: 15px;
+    }
+    nav{
+        gap:10px
+    }
 }
